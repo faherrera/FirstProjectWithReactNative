@@ -1,2 +1,3 @@
 import ChangingIconButton from './ChangingIconButton';
-export { ChangingIconButton }
+import GradientButton from './GradientButton'
+export { ChangingIconButton, GradientButton }

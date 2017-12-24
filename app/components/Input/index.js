@@ -1,2 +1,4 @@
 import InputWithRightButton from './InputWithRightButton/';
-export {InputWithRightButton};
+import SimplePicker from './SimplePicker';
+import InputWithLeftAndRightButton from './InputWithLeftAndRightButton/';
+export { InputWithRightButton, SimplePicker, InputWithLeftAndRightButton};

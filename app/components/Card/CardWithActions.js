@@ -1,7 +1,7 @@
 import React from 'react';
 
 //Vector Icons
-        import Icon from 'react-native-vector-icons/MaterialIcons';
+        import IonIcon from 'react-native-vector-icons/Ionicons';
     //UI 
         import {
             Dimensions,
@@ -30,7 +30,12 @@ const styles = StyleSheet.create({
         borderTopRightRadius: RADIUS,
         height: height * 0.4 *  0.8,
         backgroundColor: 'rgba(255,255,255,0.9)',
-        alignItems:'center'
+        alignItems:'stretch',
+        flexDirection:'column',
+        justifyContent:'flex-start',
+        paddingVertical:'2%',
+        paddingHorizontal: '4%'
+        
     },
     cardActions:{
         height: height * 0.4 * 0.2,
@@ -42,7 +47,10 @@ const styles = StyleSheet.create({
         justifyContent:'space-around',
     },
     actionButton:{
-
+        // backgroundColor:'red',
+        paddingHorizontal:30,
+        alignItems:'center',
+        justifyContent:'center',
     },
     actionText:{
         color:'white'
@@ -70,7 +78,7 @@ class CardWithActions extends React.Component{
                             style={styles.actionButton}
                             onPress={this.handlePress}
                         >
-                            <Icon name="perm-identity" size={45} color="#fff" />
+                            <IonIcon name="ios-person-add-outline" size={45} color="#fff" />
 
                         </TouchableOpacity>
                         <CardActionSeparator color="white" height={30} />
@@ -78,7 +86,7 @@ class CardWithActions extends React.Component{
                             style={styles.actionButton}
                             onPress={this.handlePress}
                         >
-                            <Icon name="headset" size={45} color="#fff" />
+                            <IonIcon name="ios-headset-outline" size={45} color="#fff" />
 
                         </TouchableOpacity>
                         <CardActionSeparator color="white" height={30} />
@@ -86,7 +94,7 @@ class CardWithActions extends React.Component{
                             style={styles.actionButton}
                             onPress={this.handlePress}
                         >
-                            <Icon name="pin-drop" size={45} color="#fff" />
+                            <IonIcon name="ios-pin-outline" size={45} color="#fff" />
 
                         </TouchableOpacity>
                     </View>

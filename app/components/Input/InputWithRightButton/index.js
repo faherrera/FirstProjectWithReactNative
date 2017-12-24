@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 //UI
     import {
@@ -19,7 +20,7 @@ const INPUTHEIGHT = 40;
 
 const styles = StyleSheet.create({
     container:{
-        width:'90%',
+        // width:'90%',
         height: INPUTHEIGHT,
         flexDirection: 'row',
         alignItems:'center',
@@ -50,6 +51,9 @@ const styles = StyleSheet.create({
     }
 });
 export default class InputWithRightButton extends Component {
+    static propTypes = {
+        placeholder : PropTypes.string,
+    }
     state = {
         isFocused: false,
         inputValue: null
@@ -91,6 +95,7 @@ export default class InputWithRightButton extends Component {
 
 
     render() {
+        const {placeholder} = this.props;
 
         const inputContainerStyle = [styles.inputContainer];
         
@@ -107,7 +112,7 @@ export default class InputWithRightButton extends Component {
                         keyboardType="numeric"
                         style={styles.textInput} 
                         underlineColorAndroid="transparent"
-                        placeholder="N° de tarjeta" 
+                        placeholder={placeholder} 
                         placeholderTextColor="#BDBDBD"
                         onChangeText={text => this.setState({inputValue:text})}
                         value={this.state.inputValue}
