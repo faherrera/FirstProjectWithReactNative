@@ -57,7 +57,8 @@ export default class LoginScreen extends Component {
                     />
                     <GradientButton
                         buttonLabel="Ingresar :)"
-                        onPress={()=> {alert("Quiero ingresar")}}
+                        onPress={() => {
+                            alert("Aquí entro al Login")}}
                         width="60"
                         height={40}
                     />

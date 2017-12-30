@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 
-import { View,Text, Image,StyleSheet } from 'react-native';
+//Router
+    import Navigator from './config/rootNavigator';
 
-//OWN COMPONENTS
-import LoginScreen from './screen/LoginScreen';
 
-const App =  () => <LoginScreen/>
+const App = () => <Navigator/>
      
 
 export default App;
